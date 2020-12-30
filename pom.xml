@@ -36,9 +36,10 @@
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
-						<applicationName>worldtimezone-service-vijay</applicationName>
+						<applicationName>worldtimezone-service</applicationName>
 						<password>Vij@y999</password>
 						<muleVersion>4.3.0</muleVersion>
+						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
