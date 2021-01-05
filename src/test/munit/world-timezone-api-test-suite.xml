@@ -10,34 +10,13 @@
 	<munit:config name="world-timezone-api-test-suite.xml" />
 	<munit:test name="world-timezone-api-test-suite-world-timezone-apiFlowTest" doc:id="fd48f187-6e8c-45a0-83b2-0c9660fc886e" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="dc81c464-cfb8-4a2b-9891-625045abd49f" name="setEventFlow"/>
-			<flow-ref doc:name="Flow-ref to world-timezone-apiFlow" doc:id="5b4c87eb-5195-41d3-94d3-4e82b0a58718" name="world-timezone-apiFlow"/>
-		</munit:execution>
-		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="bde752ad-b8f9-4b2e-b665-d19bbf33dc9d" expression="#[payload]" is="#[MunitTools::notNullValue()]" message="Payload is Null"/>
-		</munit:validation>
-	</munit:test>
-	<munit:test name="world-timezone-api-test-suite-world-timezone-apiFlowTest1" doc:id="8e6bbf42-c1b1-46b0-9da0-5a1ba55b5d09" description="Test">
-		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="836947e2-16ae-4631-9715-7ffd43f675c1" name="setEventFlow"/>
-			<flow-ref doc:name="Flow-ref to world-timezone-apiFlow" doc:id="d28181ec-99dd-4bc8-8853-b8bb76bbf8cc" name="world-timezone-apiFlow"/>
-		</munit:execution>
-		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="9806db46-187b-4864-a4aa-6ccf3d3724ec" is="#[MunitTools::withMediaType('application/json')]" expression="#[payload]" />
-		</munit:validation>
-	</munit:test>
-	<munit:test name="world-timezone-api-test-suite-world-timezone-apiFlowTest2" doc:id="703f9da3-bc60-4bf8-ae36-c38ff30b3e9c" description="Test">
-		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="d3aab2ad-fd6a-4064-a90d-f246f9c63424" name="setEventFlow"/>
-			<flow-ref doc:name="Flow-ref to world-timezone-apiFlow" doc:id="8fce39e2-6217-4207-8ac7-9f40250c12ca" name="world-timezone-apiFlow"/>
-		</munit:execution>
-		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="9f93ed45-193a-4761-a29e-0163f8c14109" is="#[MunitTools::withEncoding('UTF-8')]" expression="#[payload]"/>
-		</munit:validation>
-	</munit:test>
-	<flow name="setEventFlow" doc:id="eb6ca03c-52ba-424e-adaa-0f469486aa18" >
-		<munit:set-event doc:name="Set Event" doc:id="a19f7cb1-cbc6-4e0f-92b8-f4e290d16e00" >
+			<munit:set-event doc:name="Set Event" doc:id="a19f7cb1-cbc6-4e0f-92b8-f4e290d16e00">
 			<munit:attributes value="#[{uriParams:{region:'Asia',city:'Kolkata'}}]" />
 		</munit:set-event>
-	</flow>
+			<flow-ref doc:name="Flow-ref to world-timezone-apiFlow" doc:id="5b4c87eb-5195-41d3-94d3-4e82b0a58718" name="world-timezone-apiFlow"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="fa8e67f6-cc72-4ce9-a1a0-6f9f5dd73391" expression="#[payload]" is="#[MunitTools::allOf(MunitTools::notNullValue(),MunitTools::withMediaType('application/json'),MunitTools::withEncoding('UTF-8'))]"/>
+		</munit:validation>
+	</munit:test>
 </mule>
