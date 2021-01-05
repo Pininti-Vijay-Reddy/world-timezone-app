@@ -16,7 +16,7 @@
 			<flow-ref doc:name="Flow-ref to world-timezone-apiFlow" doc:id="5b4c87eb-5195-41d3-94d3-4e82b0a58718" name="world-timezone-apiFlow"/>
 		</munit:execution>
 		<munit:validation>
-			<munit-tools:assert-that doc:name="Assert that" doc:id="fa8e67f6-cc72-4ce9-a1a0-6f9f5dd73391" expression="#[payload]" is="#[MunitTools::allOf(MunitTools::notNullValue(),MunitTools::withMediaType('application/json'),MunitTools::withEncoding('UTF-8'))]"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="fa8e67f6-cc72-4ce9-a1a0-6f9f5dd73391" expression="#[payload]" is="#[MunitTools::allOf([MunitTools::notNullValue(),MunitTools::withMediaType('application/json'),MunitTools::withEncoding('UTF-8')])]"/>
 		</munit:validation>
 	</munit:test>
 </mule>
