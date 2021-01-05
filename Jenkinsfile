@@ -14,7 +14,7 @@ pipeline
 		{
 			steps
 			{
-				bat 'mvn clean test'
+				bat 'mvn test'
 			}
 		}
 		stage('Deploy Application To MuleSoft Cloudhub')
