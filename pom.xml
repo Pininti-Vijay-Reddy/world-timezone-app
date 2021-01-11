@@ -36,7 +36,7 @@
 						<environment>India-Mulesoft-Practice-Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
-						<applicationName>worldtimezone-service-vj</applicationName>
+						<applicationName>worldtimezone-service-vijay</applicationName>
 						<password>Vij@y999</password>
 						<muleVersion>4.3.0</muleVersion>
 						<!-- <objectStoreV2>true</objectStoreV2> -->
