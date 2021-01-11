@@ -32,7 +32,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>reddyvijayCap</username>
+						<username>vijayreddyCap</username>
 						<environment>India-Mulesoft-Practice-Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
