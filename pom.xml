@@ -32,8 +32,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>reddyvijaycseb3</username>
-						<environment>Sandbox</environment>
+						<username>reddyvijayCap</username>
+						<environment>India-Mulesoft-Practice-Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 						<applicationName>worldtimezone-service-vj</applicationName>
