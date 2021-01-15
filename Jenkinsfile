@@ -10,13 +10,6 @@ pipeline
 				bat 'mvn clean install'
 			}
 		}
-		stage('Munit Testing')
-		{
-			steps
-			{
-				bat 'mvn test'
-			}
-		}
 		stage('Deploy Application To MuleSoft Cloudhub')
 		{
 			steps
