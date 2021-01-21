@@ -92,12 +92,6 @@
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
         </dependency>
-    	<dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-db-connector</artifactId>
-            <version>1.9.1</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
     </dependencies>
 	<repositories>
           <repository>
